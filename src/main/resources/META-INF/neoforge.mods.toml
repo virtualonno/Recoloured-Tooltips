@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="LGPL v2.1"
+
+[[mods]]
+modId="recolouredtooltips"
+version="${file.jarVersion}"
+displayName="Recoloured Tooltips"
+logoFile="icon.png"
+description='''
+Adds configurable default item tooltip colors. Neoforge 1.21.1 port of Coloured Tooltips.
+'''
+
+[[dependencies.recolouredtooltips]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.recolouredtooltips]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.120,)"
+ordering="NONE"
+side="BOTH"

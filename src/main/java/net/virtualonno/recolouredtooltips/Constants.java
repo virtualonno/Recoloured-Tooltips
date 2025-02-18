@@ -1,4 +1,4 @@
-package net.darkhax.colouredtooltips;
+package net.virtualonno.recolouredtooltips;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -11,27 +11,30 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-import net.darkhax.colouredtooltips.config.HexColor;
+
 import net.minecraft.world.item.crafting.Ingredient;
+import net.virtualonno.recolouredtooltips.config.HexColor;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import com.mojang.serialization.JsonOps;
 
 import java.lang.reflect.Type;
 import java.util.Arrays;
 
 public class Constants {
 
-    public static final String MOD_ID = "colouredtooltips";
-    public static final String MOD_NAME = "Coloured Tooltips";
+    public static final String MOD_ID = "recolouredtooltips";
+    public static final String MOD_NAME = "Recoloured Tooltips";
     public static final Logger LOG = LogManager.getLogger(MOD_NAME);
     public static final Gson GSON = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().registerTypeAdapter(HexColor.class, new HexColorSerializer()).registerTypeAdapter(Ingredient.class, new IngredientSerializer()).create();
 
     private static final class IngredientSerializer implements JsonDeserializer<Ingredient> {
-
         @Override
         public Ingredient deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-
-            return Ingredient.fromJson(json);
+            return Ingredient.CODEC.parse(JsonOps.INSTANCE, json)
+                .getOrThrow(error -> new JsonParseException("Failed to parse Ingredient: " + error));
         }
     }
 
@@ -179,9 +182,9 @@ public class Constants {
 
     public enum DefaultColors {
 
-        START("505000ff", 1347420415, 80, 0, 255, 80),
-        END("5028007f", 1344798847, 40, 0, 127, 80),
-        BACKGROUND("f0100010", -267386864, 16, 0, 16, 240);
+        START("50ffffff", 1347420415, 80, 0, 255, 80),
+        END("50ffffff", 1344798847, 40, 0, 127, 80),
+        BACKGROUND("ff000066", -267386864, 16, 0, 16, 240);
 
         public final String hex;
         public final int decimal;

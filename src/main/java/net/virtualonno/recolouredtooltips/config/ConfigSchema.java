@@ -1,8 +1,8 @@
-package net.darkhax.colouredtooltips.config;
+package net.virtualonno.recolouredtooltips.config;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.darkhax.colouredtooltips.Constants;
+import net.virtualonno.recolouredtooltips.Constants;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.io.File;

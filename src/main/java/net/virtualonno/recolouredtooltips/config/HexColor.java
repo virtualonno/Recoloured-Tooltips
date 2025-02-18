@@ -1,4 +1,4 @@
-package net.darkhax.colouredtooltips.config;
+package net.virtualonno.recolouredtooltips.config;
 
 public class HexColor {
 
