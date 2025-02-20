@@ -184,7 +184,7 @@ public class Constants {
 
         START("50ffffff", 1347420415, 80, 0, 255, 80),
         END("50ffffff", 1344798847, 40, 0, 127, 80),
-        BACKGROUND("ff000066", -267386864, 16, 0, 16, 240);
+        BACKGROUND("dd000066", -267386864, 16, 0, 16, 240);
 
         public final String hex;
         public final int decimal;

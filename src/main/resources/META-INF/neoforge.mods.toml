@@ -8,7 +8,7 @@ version="${file.jarVersion}"
 displayName="Recoloured Tooltips"
 logoFile="icon.png"
 description='''
-Adds configurable default item tooltip colors. Neoforge 1.21.1 port of Coloured Tooltips.
+Lets you configure the colour of item & GUI tooltips. Neoforge port of Coloured Tooltips.
 '''
 
 [[dependencies.recolouredtooltips]]

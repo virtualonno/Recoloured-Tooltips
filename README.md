@@ -3,7 +3,7 @@
 Neoforge 1.21.1 port of [Coloured Tooltips](https://modrinth.com/mod/coloured-tooltips) by [Darkhax](https://modrinth.com/user/Darkhax).
 
 
-This mod lets you change the colour of all item and GUI tooltips in the game. You can do this through the config file found in your Minecraft folder, under 
+This mod lets you configure the colour of all item and GUI tooltips in the game. You can do this through the config file found in your Minecraft folder, under 
 
 _config/recolouredtooltips.json_
 
